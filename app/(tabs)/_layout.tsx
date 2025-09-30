@@ -9,7 +9,7 @@ const TabIcon = ({ focused, icon, title }: any) => {
     return (
       <ImageBackground
         source={images.highlight}
-        className="flex flex-row w-full flex-1 min-w-[112px] min-h-16 mt-3 justify-center items-center rounded-full overflow-hidden"
+        className="flex flex-row w-full flex-1 min-w-[112px] min-h-16 mt-4 justify-center items-center rounded-full overflow-hidden"
       >
         <Image source={icon} tintColor="#151312" className="size-5" />
         <Text className="text-secondary text-base font-semibold ml-2">
@@ -35,7 +35,6 @@ const _layout = () => {
             height: "100%",
             justifyContent: "center",
             alignItems: "center",
-            marginTop:3,
 
          },
          tabBarStyle:{
@@ -43,8 +42,9 @@ const _layout = () => {
            borderRadius: 50,
            marginHorizontal:20,
            marginBottom: 36,
-           height:55,
+           height:52,
            position: "absolute",
+           overflow: "hidden",
            borderWidth: 1, 
            borderColor: "#0f0d23"
          }
@@ -60,9 +60,9 @@ const _layout = () => {
         }}
       />
       <Tabs.Screen
-        name="saved"
+        name="search"
         options={{
-          title: "Saved",
+          title: "Search",
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <TabIcon focused={focused} icon={icons.search} title="Search" />
@@ -70,9 +70,9 @@ const _layout = () => {
         }}
       />
       <Tabs.Screen
-        name="search"
+        name="saved"
         options={{
-          title: "Search",
+          title: "Saved",
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <TabIcon focused={focused} icon={icons.save} title="Saved" />
