@@ -13,7 +13,7 @@ export const fetchMovies = async ({ query }: { query: string }) => {
     : `${TMDB_CONFIG.BASE_URL}/discover/movie?sort_by=popularity.desc`;
 
   const response = await fetch(endpoint, {
-    method: " GET ",
+    method: "GET",
     headers: TMDB_CONFIG.headers,
   });
 
